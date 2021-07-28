@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* Navigation bar starts here */
+.navbar{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    height: 62px;
+    width: 100%;
+    z-index: 10;
+    position: fixed;    
+}
+
+.navbar .nav-container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    
+}
+
+.nav-container .nav-left{
+    display: flex;
+}
+
+.nav-container img{
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 5px;
+}
+.navbar h2{
+    margin:15px;
+    font-weight: 600;
+}
+.navbar h2 span{
+    color: rgb(83, 143, 255);
+}
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0%;
+    position: absolute;
+    margin: 12px 20px;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0px 15px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 32px;
+    font-weight: 500;
+    font-family: rajdhani,sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+    
+
+#btn-primary{
+    padding: 10px 30px 10px 30px;
+    color: whitesmoke;
+    background-color:  rgb(0, 89, 255);
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#btn-primary:hover{
+    color: white;
+    background-color: rgb(15, 79, 199);
+}
+/* Navigation bar ends here */
+
+
+/* Home page starts here */
+#home{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background: url('../images/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+#home::before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.8;
+    
+    
+}
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 160px;
+    z-index: 2;
+}
+
+#home .home-container h2{
+    color: white;
+    font-family: roboto,rajdhani,helvetica neue,arial,sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#home .home-container h2:nth-child(1){
+    animation: left-to-right 3s ease 0s 1 normal forwards;
+}
+@keyframes left-to-right{
+    0% {
+        min-width: 100%;
+        right: 0px;
+        opacity: 0;
+      }
+    
+      100% {
+        min-width: 0;
+        right: 50px;
+        opacity: 1;
+      }
+}
+
+#home .home-container h2:nth-child(2){
+    color: rgb(0, 219, 0);
+    font-weight: 600;
+    opacity: 0;
+    animation: fade 2s ease 1s 1 normal forwards;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#home .home-container p{
+    color: white;
+    font-family: roboto,rajdhani,helvetica neue,arial,sans-serif;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin: 5px 10px;
+    opacity: 0;
+    animation: fade 2s ease 1s 1 normal forwards;
+}
+#home .home-container #btn-secondary{
+    padding: 11px 50px;
+    font-size: 1.1rem;
+    background-color: rgb(0, 89, 255);
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    margin: 10px;
+}
+#home .home-container #btn-secondary:hover{
+    background-color: rgb(0, 80, 230);
+    box-shadow: 0px 0px 10px rgb(48, 48, 102);
+    /* transform: scale(1.1); */
+
+}
+/* home page ends here */
+
+
+/* this is just a circle below the image for realistic view */
+.circle{
+    top: 77vh;
+    height: 78px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    border-radius: 40%;
+    z-index: 2;
+}
+/* circle ends */
+
+
+/* services section starts here */
+#services{
+    margin-top: 50px;
+
+}
+
+#services .service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+#services .service-container .box{
+    height: 310px;
+    width: 310px;
+    box-shadow: 0px 0px 10px grey;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#services .service-container .box:hover{
+    border: 3px solid rgb(123, 169, 255);
+}
+
+#services .service-container .box img{
+    width: 70px;
+    margin-top: 20px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+#services .service-container .box h2{
+    color: rgb(64, 131, 255);
+    margin: 10px 0px;
+}
+#services .service-container .box p{
+    margin: 0px 10px 10px 10px;
+    text-align: center;
+}
+
+/* services section ends here */
+
+
+
+
+
+/* footer starts here */
+footer{
+    background-color: rgb(34, 34, 34);
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* footer ends here */
+
+
+
+
+
+/* media queries fired here */
+@media screen and (max-width:1350px) {
+    .navbar .nav-container{
+        width: 95%;
+
+    }
+}
+
+@media screen and (max-width:1250px){
+    .navbar .nav-container{
+        width: 100%;
+    }
+    
+    .nav-container .nav-left{
+    margin: 0px 20px;
+    }
+} 
+
+@media only screen and (max-width:1100px){
+    .navbar ul{
+        display: none;
+    }
+    .circle{
+        top: 73vh;
+        border-radius: 20%;
+    }
+}
+
+@media only screen and (max-width:600px){
+    #services .service-container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    #btn-primary{
+        padding: 10px 20px; 
+    }
+    #home .home-container p{
+        font-size: 1.28rem;
+    }
+}
+
+
+@media only screen and (max-width:400px){
+    .navbar h2 {
+        margin: 15px 5px;
+    }
+    #services .service-container .box{
+        margin: 30px 20px;
+    }
+
+}
